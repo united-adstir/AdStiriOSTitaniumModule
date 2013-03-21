@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.2
+apiversion: 2
+description: AdStir SDK Titanium Module
+author: UNITED, inc.
+license: Apache License Version 2.0
+copyright: Copyright 2012-2013 UNITED, inc.
+
+
+# these should not be edited
+name: Adstirsdk
+moduleid: com.adstir.ti
+guid: 0eaf724d-fb1b-4182-ad38-57938b343de4
+platform: iphone
+minsdk: 3.0.2.GA

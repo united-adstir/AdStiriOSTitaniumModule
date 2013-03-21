@@ -1,0 +1,13 @@
+.DS_Store
+*~
+*.lock
+*.swp
+*.out
+
+/AdStirSDK/*.h
+/AdStirSDK/*.a
+/build
+xcuserdata
+project.xcworkspace
+
+*.zip
