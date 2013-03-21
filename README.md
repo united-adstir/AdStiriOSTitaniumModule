@@ -1,4 +1,4 @@
-AdStir Android Titanium Module
+AdStir iOS Titanium Module
 =========================
 AdStir
  http://ad-stir.com/
