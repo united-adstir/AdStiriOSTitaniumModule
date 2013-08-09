@@ -30,8 +30,6 @@
 		966E7B7C16FAE0BC00C3B388 /* ComAdstirTiAdstirProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E7B7816FAE0BC00C3B388 /* ComAdstirTiAdstirProxy.m */; };
 		966E7B8416FAE19000C3B388 /* AdstirWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 966E7B8216FAE19000C3B388 /* AdstirWebView.h */; };
 		966E7B8516FAE19000C3B388 /* libAdstirWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966E7B8316FAE19000C3B388 /* libAdstirWebView.a */; };
-		966E7B9516FAE72200C3B388 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 966E7B9216FAE72200C3B388 /* JSONKit.h */; };
-		966E7B9616FAE72200C3B388 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E7B9316FAE72200C3B388 /* JSONKit.m */; };
 		AA747D9F0F9514B9006C5449 /* ComAdstirTi_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComAdstirTi_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -56,10 +54,6 @@
 		966E7B7816FAE0BC00C3B388 /* ComAdstirTiAdstirProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComAdstirTiAdstirProxy.m; path = Classes/ComAdstirTiAdstirProxy.m; sourceTree = "<group>"; };
 		966E7B8216FAE19000C3B388 /* AdstirWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdstirWebView.h; sourceTree = "<group>"; };
 		966E7B8316FAE19000C3B388 /* libAdstirWebView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdstirWebView.a; sourceTree = "<group>"; };
-		966E7B9116FAE72200C3B388 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
-		966E7B9216FAE72200C3B388 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		966E7B9316FAE72200C3B388 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		966E7B9416FAE72200C3B388 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ComAdstirTi_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComAdstirTi_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComAdstirTi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComAdstirTi.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +83,6 @@
 		0867D691FE84028FC02AAC07 /* Adstirsdk */ = {
 			isa = PBXGroup;
 			children = (
-				966E7B9016FAE72200C3B388 /* JSONKit */,
 				966E7B8116FAE19000C3B388 /* AdStirSDK */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -138,17 +131,6 @@
 			path = AdStirSDK;
 			sourceTree = "<group>";
 		};
-		966E7B9016FAE72200C3B388 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				966E7B9116FAE72200C3B388 /* CHANGELOG.md */,
-				966E7B9216FAE72200C3B388 /* JSONKit.h */,
-				966E7B9316FAE72200C3B388 /* JSONKit.m */,
-				966E7B9416FAE72200C3B388 /* README.md */,
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -161,7 +143,6 @@
 				966E7B7916FAE0BC00C3B388 /* ComAdstirTiAdstir.h in Headers */,
 				966E7B7B16FAE0BC00C3B388 /* ComAdstirTiAdstirProxy.h in Headers */,
 				966E7B8416FAE19000C3B388 /* AdstirWebView.h in Headers */,
-				966E7B9516FAE72200C3B388 /* JSONKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +216,6 @@
 				24DD6CFA1134B3F500162E58 /* ComAdstirTiModule.m in Sources */,
 				966E7B7A16FAE0BC00C3B388 /* ComAdstirTiAdstir.m in Sources */,
 				966E7B7C16FAE0BC00C3B388 /* ComAdstirTiAdstirProxy.m in Sources */,
-				966E7B9616FAE72200C3B388 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
