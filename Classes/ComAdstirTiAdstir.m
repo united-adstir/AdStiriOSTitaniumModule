@@ -6,12 +6,12 @@
  */
 
 #import "ComAdstirTiAdstir.h"
-#import "AdstirView.h"
+#import "AdstirWebView.h"
 #import "TiApp.h"
 #import "TiUtils.h"
 
-@interface ComAdstirTiAdstir () <AdstirViewDelegate>
-@property (retain) AdstirView* adstir;
+@interface ComAdstirTiAdstir ()
+@property (retain) AdstirWebView* adstir;
 @end
 
 @implementation ComAdstirTiAdstir
@@ -27,13 +27,15 @@
 -(void)refreshAd:(CGRect)bounds
 {
 	if (self.adstir == nil) {
-		self.adstir = [[[AdstirView alloc] initWithOrigin:bounds.origin]autorelease];
-		self.adstir.media = [self.proxy valueForKey:@"media"];
-		self.adstir.spot = [[self.proxy valueForKey:@"spot"]intValue];
-		self.adstir.rootViewController = [[TiApp app] controller];
-		self.adstir.delegate = self;
+		self.adstir = [[[AdstirWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 50) media:[self.proxy valueForKey:@"media"] spot:[self.proxy valueForKey:@"spot"]]autorelease];
+		NSString* interval = [self.proxy valueForKey:@"refreshInterval"];
+		if(interval == nil){
+			self.adstir.intervalTime = ADSTIRWEBVIEW_DEFAULT_INTERVAL;
+		}else{
+			self.adstir.intervalTime = [interval intValue];
+		}
+		
 		[self addSubview:self.adstir];
-		[self.adstir start];
 	}
 }
 
@@ -46,9 +48,7 @@
 -(void)willMoveToSuperview:(UIView *)newSuperview{
 	if(newSuperview == nil){
 		if (self.adstir != nil) {
-			[self.adstir stop];
 			[self.adstir removeFromSuperview];
-			self.adstir.rootViewController = nil;
 			self.adstir = nil;
 		}
 	}
@@ -58,23 +58,10 @@
 -(void)dealloc
 {
     if (self.adstir != nil) {
-		[self.adstir stop];
 		[self.adstir removeFromSuperview];
-		self.adstir.rootViewController = nil;
 		self.adstir = nil;
 	}
     [super dealloc];
-}
-
-#pragma mark Ad Delegate
-
-- (void)adstirDidReceiveAd:(AdstirView*)adstirview{
-	NSLog(@"ComAdstirTiAdstir adstirDidReceiveAd:");
-    [self.proxy fireEvent:@"didReceiveAd"];
-}
-- (void)adstirDidFailToReceiveAd:(AdstirView*)adstirview{
-	NSLog(@"ComAdstirTiAdstir adstirDidFailToReceiveAd:");
-    [self.proxy fireEvent:@"didFailToReceiveAd"];
 }
 
 @end
