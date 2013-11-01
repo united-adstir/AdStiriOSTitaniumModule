@@ -27,7 +27,7 @@
 -(void)refreshAd:(CGRect)bounds
 {
 	if (self.adstir == nil) {
-		self.adstir = [[[AdstirWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 50) media:[self.proxy valueForKey:@"media"] spot:[self.proxy valueForKey:@"spot"]]autorelease];
+		self.adstir = [[[AdstirWebView alloc] initWithFrame:bounds media:[self.proxy valueForKey:@"media"] spot:[self.proxy valueForKey:@"spot"]]autorelease];
 		NSString* interval = [self.proxy valueForKey:@"refreshInterval"];
 		if(interval == nil){
 			self.adstir.intervalTime = ADSTIRWEBVIEW_DEFAULT_INTERVAL;
